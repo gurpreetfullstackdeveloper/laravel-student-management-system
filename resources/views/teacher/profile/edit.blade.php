@@ -1,0 +1,3 @@
+@extends('teacher.layout')
+@section('title', 'Teacher Profile')
+@section('content')<h1>Teacher Profile</h1><p><strong>Name:</strong> {{ $teacher->user->name }}</p><p><strong>Employee code:</strong> {{ $teacher->employee_code }}</p><form method="POST" action="{{ route('teacher.profile.update') }}">@csrf @method('PUT')<label for="phone">Phone</label><input id="phone" name="phone" value="{{ old('phone', $teacher->phone) }}"><label for="qualification">Qualification</label><input id="qualification" name="qualification" value="{{ old('qualification', $teacher->qualification) }}"><br><button type="submit">Save profile</button></form>@endsection

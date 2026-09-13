@@ -1,0 +1,3 @@
+@extends('public.layout')
+@section('title', 'Contact')
+@section('content')<section class="section"><div class="shell prose"><p class="meta">Start a conversation</p><h1>Contact</h1><p>For admissions, use our <a href="{{ route('public.admissions') }}">admission enquiry form</a>. For general questions, contact the school office.</p><p><strong>Email:</strong> {{ $settings['contact_email'] ?? 'office@example.test' }}</p><p><strong>Phone:</strong> {{ $settings['contact_phone'] ?? '+1 555 0100' }}</p><p><strong>Address:</strong> {{ $settings['address'] ?? 'School office, Main Street' }}</p></div></section>@endsection

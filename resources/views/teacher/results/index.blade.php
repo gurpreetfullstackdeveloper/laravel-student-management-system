@@ -1,0 +1,3 @@
+@extends('teacher.layout')
+@section('title', 'Results')
+@section('content')<h1>Results: {{ $assignment->schoolClass->name }} {{ $assignment->section->name }}</h1><table><thead><tr><th>Student</th><th>Exam</th><th>Published</th></tr></thead><tbody>@forelse($results as $result)<tr><td>{{ $result->student->user->name }}</td><td>{{ $result->exam->name }}</td><td>{{ $result->is_published ? 'Yes' : 'No' }}</td></tr>@empty<tr><td colspan="3">No results.</td></tr>@endforelse</tbody></table>{{ $results->links() }}@endsection

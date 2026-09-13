@@ -1,0 +1,3 @@
+@extends('public.layout')
+@section('title', 'FAQ')
+@section('content')<section class="section"><div class="shell prose"><p class="meta">Questions, answered</p><h1>FAQ</h1><h2>How do I apply?</h2><p>Use the admissions enquiry form and our team will contact you.</p><h2>How do students access their portal?</h2><p>Students sign in with their username or email through the Student link in the navigation.</p><h2>How do teachers access their portal?</h2><p>Teachers use the Teacher link and sign in with the shared web authentication system.</p><h2>Where are notices and events published?</h2><p>Published notices and events appear on this website and, where targeted, inside the relevant portal.</p></div></section>@endsection

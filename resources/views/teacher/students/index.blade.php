@@ -1,0 +1,3 @@
+@extends('teacher.layout')
+@section('title', 'Assigned Students')
+@section('content')<h1>Assigned Students</h1><table><thead><tr><th>Name</th><th>Admission no.</th><th>Enrollment</th></tr></thead><tbody>@forelse($students as $student)<tr><td>{{ $student->user->name }}</td><td>{{ $student->admission_no }}</td><td>@foreach($student->enrollments as $enrollment){{ $enrollment->schoolClass->name }} {{ $enrollment->section->name }} ({{ $enrollment->academicYear->name }})@if(!$loop->last), @endif @endforeach</td></tr>@empty<tr><td colspan="3">No students in assigned classes.</td></tr>@endforelse</tbody></table>{{ $students->links() }}@endsection

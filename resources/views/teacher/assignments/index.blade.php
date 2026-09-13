@@ -1,0 +1,3 @@
+@extends('teacher.layout')
+@section('title', 'Assigned Classes')
+@section('content')<h1>Assigned Classes and Subjects</h1><table><thead><tr><th>Academic year</th><th>Class</th><th>Section</th><th>Subject</th><th>Actions</th></tr></thead><tbody>@forelse($assignments as $assignment)<tr><td>{{ $assignment->academicYear->name }}</td><td>{{ $assignment->schoolClass->name }}</td><td>{{ $assignment->section->name }}</td><td>{{ $assignment->subject->name }}</td><td><a href="{{ route('teacher.attendance.edit', $assignment) }}">Attendance</a> · <a href="{{ route('teacher.marks.edit', $assignment) }}">Marks</a></td></tr>@empty<tr><td colspan="5">No assignments.</td></tr>@endforelse</tbody></table>{{ $assignments->links() }}@endsection

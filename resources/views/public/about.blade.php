@@ -1,0 +1,3 @@
+@extends('public.layout')
+@section('title', 'About')
+@section('content')<section class="section"><div class="shell prose"><p class="meta">About the school</p><h1>{{ $settings['school_name'] ?? 'Oakbridge School' }}</h1><p>{{ $settings['about_intro'] ?? 'We bring together rigorous learning, generous mentorship, and the confidence to ask better questions.' }}</p><h2>Our approach</h2><p>Students learn through clear expectations, thoughtful guidance, and meaningful opportunities to contribute. Families, teachers, and students share responsibility for a warm and ambitious community.</p></div></section>@endsection

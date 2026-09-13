@@ -1,0 +1,3 @@
+@extends('public.layout')
+@section('title', 'Gallery')
+@section('content')<section class="section"><div class="shell"><h1>Gallery</h1><div class="grid">@forelse($galleries as $gallery)<article class="card"><h2>{{ $gallery->title }}</h2><p>{{ $gallery->body }}</p>@foreach($gallery->images as $image)<figure><img src="{{ asset('storage/'.$image->path) }}" alt="{{ $image->caption ?? $gallery->title }}" style="width:100%;height:180px;object-fit:cover"><figcaption class="meta">{{ $image->caption }}</figcaption></figure>@endforeach</article>@empty<p>No galleries published yet.</p>@endforelse</div>{{ $galleries->links() }}</div></section>@endsection
