@@ -8,6 +8,7 @@ use Illuminate\View\View;
 
 class FeeController extends Controller
 {
+    // these methods are for the student to view their own fees and fee details
     public function index(): View
     {
         $this->authorize('viewAny', StudentFee::class);
